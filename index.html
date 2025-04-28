@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page - DataPilot</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 0.5s ease-in forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Hero Section -->
+    <section
+      class="flex flex-col items-center justify-center min-h-screen text-center px-4 fade-in"
+    >
+      <h1 class="text-5xl font-bold mb-4">
+        Supercharge your data with <span class="text-blue-600">DataPilot</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 max-w-xl">
+        DataPilot helps you manage, visualize, and understand your data like
+        never before. Easy. Fast. Powerful.
+      </p>
+      <button
+        class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition"
+        onclick="scrollToPricingSection()"
+      >
+        Get Started
+      </button>
+    </section>
+    <!-- Pricing Section (Initially Hidden) -->
+    <section
+      class="py-20 bg-gray-50 hidden transition-all duration-500 ease-in-out opacity-0"
+      id="pricing-section"
+    >
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12">Choose Your Plan</h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Basic</h3>
+            <p class="text-xl text-gray-600 mb-6">$19/month</p>
+            <ul class="text-left mb-6">
+              <li class="mb-2">1 User</li>
+              <li class="mb-2">Basic Analytics</li>
+              <li class="mb-2">Email Support</li>
+            </ul>
+            <button
+              class="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+            <p class="text-xl text-gray-600 mb-6">$49/month</p>
+            <ul class="text-left mb-6">
+              <li class="mb-2">Up to 10 Users</li>
+              <li class="mb-2">Advanced Analytics</li>
+              <li class="mb-2">Priority Support</li>
+            </ul>
+            <button
+              class="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+            <p class="text-xl text-gray-600 mb-6">$99/month</p>
+            <ul class="text-left mb-6">
+              <li class="mb-2">Unlimited Users</li>
+              <li class="mb-2">Custom Analytics</li>
+              <li class="mb-2">24/7 Support</li>
+            </ul>
+            <button
+              class="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition-colors"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50 fade-in">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12">
+          Why Choose <span class="text-blue-600">DataPilot</span>
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Feature 1 -->
+          <div class="flex flex-col items-center">
+            <!-- I added an icons from heroicons.com (free SVGs from tailwind css creators)-->
+            <svg
+              class="w-16 h-16 text-blue-600 mb-4 transition-transform transform hover:scale-110"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2">Lightning Fast</h3>
+            <p class="text-gray-600">
+              Experience data processing at the speed of light, without any
+              delays.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="flex flex-col items-center">
+            <svg
+              class="w-16 h-16 text-blue-600 mb-4 transition-transform transform hover:scale-110"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11 17l-5-5m0 0l5-5m-5 5h12"
+              />
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2">Powerful Insights</h3>
+            <p class="text-gray-600">
+              Unlock deep insights into your data with smart analytics tools.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="flex flex-col items-center">
+            <svg
+              class="w-16 h-16 text-blue-600 mb-4 transition-transform transform hover:scale-110"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 8c-1.657 0-3 1.343-3 3 0 .795.313 1.515.823 2.06A3 3 0 0012 17a3 3 0 002.177-.94A2.978 2.978 0 0015 11c0-1.657-1.343-3-3-3z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 2v2m0 16v2m10-10h-2m-16 0H2m15.364 6.364l-1.414-1.414m0-9.9l1.414-1.414m-9.9 1.414L4.636 6.636m0 10.728l1.414-1.414"
+              />
+            </svg>
+            <h3 class="text-2xl font-semibold mb-2">Easy Integration</h3>
+            <p class="text-gray-600">
+              Connect DataPilot with your favorite apps in just a few clicks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="py-20 fade-in">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-12">What Our Users Say</h2>
+
+        <div class="grid gap-8 md:grid-cols-2">
+          <!-- 1 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md fade-in transition-transform transform hover:-translate-y-2 hover:shadow-lg"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Product Manager at TechCorp
+            </h3>
+            <p class="text-gray-600">
+              "DataPilot transformed the way our team works with data. It's
+              fast, reliable, and easy to use!"
+            </p>
+          </div>
+
+          <!-- 2 -->
+          <div
+            class="bg-white p-8 rounded-lg shadow-md fade-in transition-transform transform hover:-translate-y-2 hover:shadow-lg"
+          >
+            <h3 class="text-xl font-semibold mb-2">
+              Senior Analyst at DataFlow
+            </h3>
+            <p class="text-gray-600">
+              "Thanks to DataPilot, we gained insights we never thought
+              possible. Absolutely love it!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="text-sm mb-2">© 2025 DataPilot. All rights reserved.</p>
+        <div class="flex justify-center space-x-6">
+          <!-- Facebook Icon -->
+          <a
+            href="#"
+            class="text-white hover:text-blue-600 transition-all duration-300 ease-in-out"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <!-- LinkedIn Icon -->
+          <a
+            href="#"
+            class="text-white hover:text-blue-500 transition-all duration-300 ease-in-out"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <!-- Twitter Icon -->
+          <a
+            href="#"
+            class="text-white hover:text-blue-400 transition-all duration-300 ease-in-out"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <!-- YouTube Icon -->
+          <a
+            href="#"
+            class="text-white hover:text-red-600 transition-all duration-300 ease-in-out"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function scrollToPricingSection() {
+        const pricingSection = document.getElementById("pricing-section");
+        pricingSection.classList.remove("hidden");
+        pricingSection.classList.add("opacity-100");
+        pricingSection.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>

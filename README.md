@@ -12,8 +12,5 @@ A **responsive landing page** for the fictional SaaS product **DataPilot**. Desi
 
 ## Technologies Used
 - **HTML5**: For structure and accessibility.
-- **Tailwind CSS**: Utility-first framework for a responsive design.
+- **Tailwind CSS**: For building custom, responsive designs.
 - **JavaScript**: For smooth scrolling and interactions.
-
-## Purpose
-Built to demonstrate front-end development skills with a focus on modern, responsive design and user-friendly interactions.
